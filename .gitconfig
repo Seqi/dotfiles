@@ -1,0 +1,21 @@
+[user]
+	email = tomseqi@live.co.uk
+	name = seqi
+[alias]
+	a = add
+	aa = add .
+	b = branch
+	co = checkout
+	ci = commit
+	cim = commit -m
+	ciam = commit -a -m
+	diffs = diff --staged
+	up = push
+	down = pull
+	nb = checkout -b 
+	oops = commit -a --amend --no-edit
+	amend = commit --amend --no-edit
+	nuke = clean -fdx
+[push]	
+	default = simple
+	followTags = true
