@@ -11,3 +11,6 @@ alias fbl='firebase list'
 alias fbd='firebase deploy'
 alias fbdh='firebase deploy --only hosting'
 alias fbdf='firebase deploy --only functions'
+
+# Generic
+alias zshrestart='source ~/.zshrc'
