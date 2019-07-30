@@ -17,3 +17,7 @@ git clone https://github.com/dracula/zsh.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/
 
 # Move dot files
 bash ./update.sh
+
+# Install fonts
+mkdir -p ~/.fonts
+cp ./fonts/* ~/.fonts/
