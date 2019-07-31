@@ -1,5 +1,5 @@
 # Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
 
 ### Install Zsh Plugins ###
 
@@ -21,3 +21,6 @@ bash ./update.sh
 # Install fonts
 mkdir -p ~/.fonts
 cp ./fonts/* ~/.fonts/
+
+# Make zsh default shell
+chsh -s $(which zsh)
