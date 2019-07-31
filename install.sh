@@ -19,7 +19,7 @@ git clone https://github.com/seqi/firebase-zsh ${ZSH_CUSTOM:-~/.oh-my-zsh/custom
 echo -e "\e[0m\e[45m\n############ Installing zsh themes ############\n\e[0m\e[35m"
 
 # Dracula
-ln -s $(realpath $(dirname $0))/themes/dracula-zsh/dracula.zsh-theme ${ZSH:-~/.oh-my-zsh}/themes/dracula.zsh-theme
+ln -s $(realpath $(dirname $0))/themes/dracula-zsh/dracula.zsh-theme ${ZSH:-~/.oh-my-zsh}/themes/dracula.zsh-theme 
 
 #######################
 #       VS Code       #

@@ -19,3 +19,7 @@
 [push]	
 	default = simple
 	followTags = true
+[color]
+	status = auto
+[color "status"]
+	changed = magenta
