@@ -17,7 +17,7 @@ git clone https://github.com/seqi/firebase-zsh ${ZSH_CUSTOM:-~/.oh-my-zsh/custom
 ### Themes ###
 
 # Dracula
-git clone https://github.com/dracula/zsh.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/dracula
+ln -s $(realpath $(dirname $0))/themes/dracula-zsh/dracula.zsh-theme ${ZSH:-~/.oh-my-zsh}/themes/dracula.zsh-theme
 
 #######################
 #       VS Code       #
