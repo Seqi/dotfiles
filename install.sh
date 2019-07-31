@@ -51,6 +51,7 @@ then
 	code --install-extension wart.ariake-dark
 	code --install-extension xabikos.ReactSnippets
 	code --install-extension Zignd.html-css-class-completion
+	code --install-extension dracula-theme.theme-dracula
 fi
 
 # Move dot files
