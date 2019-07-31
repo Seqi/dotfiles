@@ -54,6 +54,11 @@ then
 	code --install-extension dracula-theme.theme-dracula
 fi
 
+
+#######################
+#       .files        #
+#######################
+
 # Move dot files
 echo -e "\e[0m\e[45m\n############ Moving .files ############\n\e[0m\e[35m"
 
