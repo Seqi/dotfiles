@@ -4,29 +4,21 @@
 	"editor.fontSize": 13,
 	"editor.insertSpaces": false,
 	"editor.minimap.enabled": false,
-	"terminal.integrated.fontSize": 12,
 
-	"breadcrumbs.enabled": true,
+	"terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\bash.exe",
+	"terminal.integrated.shellArgs.windows": ["-c", "zsh"],
+	"terminal.integrated.fontSize": 13,
+
 	"explorer.confirmDragAndDrop": false,
 	"explorer.confirmDelete": false,
 
-	"javascript.updateImportsOnFileMove.enabled": "always",
-
-	"emmet.includeLanguages": {
-		"javascript": "javascriptreact"
-	},
+	"breadcrumbs.enabled": true,
 
 	"git.enableSmartCommit": true,
 	"git.autofetch": true,
 
-	"workbench.colorTheme": "Electron",
+	"workbench.colorTheme": "Dracula",
 	"workbench.iconTheme": "material-icon-theme",
-	"material-icon-theme.folders.theme": "classic",
-	// "workbench.colorCustomizations": {
-	// 	"panel.border": "#0f1419",
-	// 	"editorGroup.border": "#0f1419",
-	// 	"sideBar.border": "#0f1419"
-	// },
 
 	"eslint.enable": true,
 	"eslint.autoFixOnSave": true,
@@ -39,8 +31,14 @@
 	"prettier.semi": false,
 	"prettier.singleQuote": true,
 	"prettier.useTabs": true,
+
+	"emmet.includeLanguages": {
+		"javascript": "javascriptreact"
+	},
+
+	"javascript.updateImportsOnFileMove.enabled": "always",
 	"[javascript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
 	},
 	"[json]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
