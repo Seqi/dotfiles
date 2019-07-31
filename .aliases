@@ -14,3 +14,4 @@ alias fbdf='firebase deploy --only functions'
 
 # Generic
 alias zshrestart='source ~/.zshrc'
+alias aliasls="echo '\e[36mGlobal\e[0m' && cat ~/.aliases | grep 'alias' && echo '\e[36mGit\e[0m' &&  git config --get-regexp alias | sed 's/\./ /' | grep alias"
