@@ -51,6 +51,12 @@ then
 	cp "$(dotfiles_path)/.wsl" $HOME/
 fi
 
+# Install fonts
+echo -e "Copying fonts"
+mkdir -p ~/.fonts
+cp ./fonts/* ~/.fonts/
+
+
 #######################
 #       VS Code       #
 #######################
@@ -84,11 +90,6 @@ then
 	code --install-extension Zignd.html-css-class-completion
 	code --install-extension dracula-theme.theme-dracula
 fi
-
-# Install fonts
-echo -e "Copying fonts"
-mkdir -p ~/.fonts
-cp ./fonts/* ~/.fonts/
 
 # Make zsh default shell
 echo -e "\e[0m\e[42m\n############ Setting zsh as default shell (password required) ############\n\e[0m\e[32m"
