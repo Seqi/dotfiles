@@ -1,3 +1,7 @@
+function dotfiles_path() {
+	echo $(realpath $(dirname $0))
+}
+
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
 
@@ -19,7 +23,8 @@ git clone https://github.com/seqi/firebase-zsh ${ZSH_CUSTOM:-~/.oh-my-zsh/custom
 echo -e "\e[0m\e[45m\n############ Installing zsh themes ############\n\e[0m\e[35m"
 
 # Dracula
-ln -s $(realpath $(dirname $0))/themes/dracula-zsh/dracula.zsh-theme ${ZSH:-~/.oh-my-zsh}/themes/dracula.zsh-theme 
+echo "Installing dracula theme"
+ln -s $(dotfiles_path)/themes/dracula-zsh/dracula.zsh-theme ${ZSH:-~/.oh-my-zsh}/themes/dracula.zsh-theme 
 
 #######################
 #       VS Code       #
@@ -65,7 +70,7 @@ echo -e "\e[0m\e[45m\n############ Moving .files ############\n\e[0m\e[35m"
 dotfiles=(".aliases" ".gitconfig" ".profile" ".zshrc")
 for dotfile in "${dotfiles[@]}";do	
 	echo -e "Copying ${dotfile}"
-    cp "./${dotfile}" $HOME/
+    cp "$(dotfiles_path)/${dotfile}" $HOME/
 done
 
 # Install fonts
