@@ -49,6 +49,9 @@ if [ $(is_wsl) ]
 then
 	echo -e "Copying .wsl"
 	cp "$(dotfiles_path)/.wsl" $HOME/
+
+	echo -e "Copying wsl.conf"
+	cp "$(dotfiles_path)/wsl.conf" /etc/
 fi
 
 # Install fonts
