@@ -2,6 +2,12 @@ function dotfiles_path() {
 	echo $(realpath $(dirname $0))
 }
 
+function is_wsl() {
+	if grep -q Microsoft /proc/version; then
+  		echo 1
+	fi
+}
+
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
 
@@ -27,10 +33,30 @@ echo "Installing dracula theme"
 ln -s $(dotfiles_path)/themes/dracula-zsh/dracula.zsh-theme ${ZSH:-~/.oh-my-zsh}/themes/dracula.zsh-theme 
 
 #######################
+#       .files        #
+#######################
+
+# Move dot files
+echo -e "\e[0m\e[45m\n############ Moving .files ############\n\e[0m\e[35m"
+
+dotfiles=(".aliases" ".gitconfig" ".profile" ".zshrc")
+for dotfile in "${dotfiles[@]}";do	
+	echo -e "Copying ${dotfile}"
+    cp "$(dotfiles_path)/${dotfile}" $HOME/
+done
+
+if [ $(is_wsl) ]
+then
+	echo -e "Copying .wsl"
+	cp "$(dotfiles_path)/.wsl" $HOME/
+fi
+
+#######################
 #       VS Code       #
 #######################
 
 # Copy settings file across (linux only, non-WSL)
+# Can't seem to reliably find Windows install location (%APPDATA)
 if [ -e $HOME/.config/Code ]
 then
 	echo -e "\e[0m\e[41m\n############ Copying VS Code Config ############\n\e[0m"
@@ -58,20 +84,6 @@ then
 	code --install-extension Zignd.html-css-class-completion
 	code --install-extension dracula-theme.theme-dracula
 fi
-
-
-#######################
-#       .files        #
-#######################
-
-# Move dot files
-echo -e "\e[0m\e[45m\n############ Moving .files ############\n\e[0m\e[35m"
-
-dotfiles=(".aliases" ".gitconfig" ".profile" ".zshrc")
-for dotfile in "${dotfiles[@]}";do	
-	echo -e "Copying ${dotfile}"
-    cp "$(dotfiles_path)/${dotfile}" $HOME/
-done
 
 # Install fonts
 echo -e "Copying fonts"

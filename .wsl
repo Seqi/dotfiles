@@ -1,0 +1,5 @@
+# Fix crappy color combos for directories
+export LS_COLORS='ow=01;36;40'
+
+# Docker fix for Windows
+export DOCKER_HOST=tcp://localhost:2375
