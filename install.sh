@@ -8,12 +8,12 @@ function is_wsl() {
 	fi
 }
 
-# Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
-
 #######################
 #         Zsh         #
 #######################
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
 
 ### Plugins ###
 echo -e "\e[42m\n############ Installing zsh plugins ############\n\e[0m\e[32m"
@@ -37,7 +37,7 @@ ln -s $(dotfiles_path)/themes/dracula-zsh/dracula.zsh-theme ${ZSH:-~/.oh-my-zsh}
 #######################
 
 # Move dot files
-echo -e "\e[0m\e[45m\n############ Moving .files ############\n\e[0m\e[35m"
+echo -e "\e[0m\e[46m\n############ Moving .files ############\n\e[0m\e[36m"
 
 dotfiles=(".aliases" ".gitconfig" ".profile" ".zshrc")
 for dotfile in "${dotfiles[@]}";do	
@@ -59,7 +59,6 @@ echo -e "Copying fonts"
 mkdir -p ~/.fonts
 cp ./fonts/* ~/.fonts/
 
-
 #######################
 #       VS Code       #
 #######################
@@ -68,14 +67,14 @@ cp ./fonts/* ~/.fonts/
 # Can't seem to reliably find Windows install location (%APPDATA)
 if [ -e $HOME/.config/Code ]
 then
-	echo -e "\e[0m\e[41m\n############ Copying VS Code Config ############\n\e[0m"
+	echo -e "\e[0m\e[45m\n############ Copying VS Code Config ############\n\e[0m"
 	cp -f ./code/vscode/settings.json $HOME/.config/Code/User/settings.json
 fi
 
 # Install extensions
 if hash code 2>/dev/null
 then
-	echo -e "\e[0m\e[46m\n############ Installing VS Code Extensions ############\n\e[0m\e[36m"
+	echo -e "\e[0m\e[36m\n############ Installing VS Code Extensions ############\n\e[0m\e[35m"
 	code --install-extension CoenraadS.bracket-pair-colorizer
 	code --install-extension dbaeumer.vscode-eslint
 	code --install-extension Equinusocio.vsc-material-theme
@@ -93,6 +92,10 @@ then
 	code --install-extension Zignd.html-css-class-completion
 	code --install-extension dracula-theme.theme-dracula
 fi
+
+#######################
+#      Finish up      #
+#######################
 
 # Make zsh default shell
 echo -e "\e[0m\e[42m\n############ Setting zsh as default shell (password required) ############\n\e[0m\e[32m"
