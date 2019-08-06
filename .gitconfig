@@ -1,3 +1,5 @@
+[core]
+	ignoreCase = true
 [user]
 	email = tomseqi@live.co.uk
 	name = seqi
@@ -9,6 +11,7 @@
 	ci = commit
 	cim = commit -m
 	ciam = commit -a -m
+	s = status
 	diffs = diff --staged
 	up = push
 	down = pull
