@@ -116,7 +116,7 @@ precmd() {
 
 PROMPT+='$DRACULA_GIT_STATUS'
 
-PROMPT+=' $(firebase_project)'
+PROMPT+='$(firebase_project)'
 
 ZSH_THEME_GIT_PROMPT_CLEAN=") %F{green}%B✔ "
 ZSH_THEME_GIT_PROMPT_DIRTY=") %F{yellow}%B✗ "
