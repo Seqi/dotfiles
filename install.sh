@@ -1,7 +1,3 @@
-function dotfiles_path() {
-	echo $(realpath $(dirname $0))
-}
-
 # Bring in OS Helpers
 source ./os_check.zsh
 
@@ -27,10 +23,10 @@ echo -e "\e[0m\e[45m\n############ Installing zsh themes ############\n\e[0m\e[3
 
 # Dracula
 echo "Installing dracula theme"
-ln -s $(dotfiles_path)/themes/dracula-zsh/dracula.zsh-theme ${ZSH:-~/.oh-my-zsh}/themes/dracula.zsh-theme 
+ln -s $(pwd)/themes/dracula-zsh/dracula.zsh-theme ${ZSH:-~/.oh-my-zsh}/themes/dracula.zsh-theme 
 
 echo "Adding zsh helpers"
-cp "$(dotfiles_path)/os_check.zsh" ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}
+cp "$(pwd)/os_check.zsh" ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}
 
 #######################
 #       .files        #
@@ -42,16 +38,16 @@ echo -e "\e[0m\e[46m\n############ Moving .files ############\n\e[0m\e[36m"
 dotfiles=(".aliases" ".gitconfig" ".profile" ".zshrc")
 for dotfile in "${dotfiles[@]}";do	
 	echo -e "Copying ${dotfile}"
-    cp "$(dotfiles_path)/${dotfile}" $HOME/
+    cp "$(pwd)/${dotfile}" $HOME/
 done
 
 if [ $(is_wsl) ]
 then
 	echo -e "Copying .wsl"
-	cp "$(dotfiles_path)/.wsl" $HOME/
+	cp "$(pwd)/.wsl" $HOME/
 
 	echo -e "Copying wsl.conf"
-	cp "$(dotfiles_path)/wsl.conf" /etc/
+	cp "$(pwd)/wsl.conf" /etc/
 fi
 
 # Install fonts
