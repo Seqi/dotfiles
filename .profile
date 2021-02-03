@@ -14,7 +14,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # If WSL, import WSL settings
 function is_wsl() {
-        if grep -q Microsoft /proc/version; then
+        if grep -q -i Microsoft /proc/version; then
                 echo 1
         fi
 }
