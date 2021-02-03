@@ -60,40 +60,6 @@ mkdir -p ~/.fonts
 cp ./fonts/* ~/.fonts/
 
 #######################
-#       VS Code       #
-#######################
-
-# Copy settings file across (linux only, non-WSL)
-# Can't seem to reliably find Windows install location (%APPDATA)
-if [ -e $HOME/.config/Code ]
-then
-	echo -e "\e[0m\e[45m\n############ Copying VS Code Config ############\n\e[0m"
-	cp -f ./code/vscode/settings.json $HOME/.config/Code/User/settings.json
-fi
-
-# Install extensions
-if hash code 2>/dev/null
-then
-	echo -e "\e[0m\e[36m\n############ Installing VS Code Extensions ############\n\e[0m\e[35m"
-	code --install-extension CoenraadS.bracket-pair-colorizer
-	code --install-extension dbaeumer.vscode-eslint
-	code --install-extension Equinusocio.vsc-material-theme
-	code --install-extension esbenp.prettier-vscode
-	code --install-extension kuscamara.electron
-	code --install-extension ms-azuretools.vscode-docker
-	code --install-extension msjsdiag.debugger-for-chrome
-	code --install-extension Orta.vscode-jest
-	code --install-extension PKief.material-icon-theme
-	code --install-extension robinbentley.sass-indented
-	code --install-extension shd101wyy.markdown-preview-enhanced
-	code --install-extension teabyii.ayu
-	code --install-extension wart.ariake-dark
-	code --install-extension xabikos.ReactSnippets
-	code --install-extension Zignd.html-css-class-completion
-	code --install-extension dracula-theme.theme-dracula
-fi
-
-#######################
 #      Finish up      #
 #######################
 
