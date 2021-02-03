@@ -13,12 +13,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # If WSL, import WSL settings
-function is_wsl() {
-        if grep -q -i Microsoft /proc/version; then
-                echo 1
-        fi
-}
-
 if [ $(is_wsl) ]
 then
         source ~/.wsl
