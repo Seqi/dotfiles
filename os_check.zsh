@@ -1,5 +1,5 @@
 function is_wsl() {
-        if grep -q -i Microsoft /proc/version; then
+        if grep -q -i Microsoft /proc/version 2> /dev/null; then
                 echo 1
         fi
 }
