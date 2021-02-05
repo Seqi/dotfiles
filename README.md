@@ -2,7 +2,7 @@
 
 Configs, themes, aliases, oh my. It's the doot files :trumpet:.
 
-![](https://i.imgur.com/jXhVd3a.jpg)
+![](https://i.imgur.com/He0FJ7N.png)
 ---
 
 ## [`install.sh`](install.sh) :wrench:
