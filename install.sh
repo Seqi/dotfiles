@@ -16,7 +16,7 @@ else
 fi
 
 ### Plugins ###
-echo -e "\033[0m\033[42m\n############ Installing zsh plugins ############\n\e[0m\e[32m"
+echo -e "\n\033[30m\033[44m############ Installing zsh plugins ############\n\e[0m\e[34m"
 
 # Syntax Highlighting
 if [[ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting ]]
@@ -49,7 +49,7 @@ else
 fi
 
 ### Themes ###
-echo -e "\033[0m\033[44m\n############ Installing zsh themes ############\n\033[0m\033[34m"
+echo -e "\n\033[30m\033[42m############ Installing zsh themes ############\n\033[0m\033[32m"
 
 # Dracula
 if [[ -f ${ZSH:-~/.oh-my-zsh}/themes/dracula.zsh-theme ]]
@@ -58,15 +58,16 @@ then
 	rm ${ZSH:-~/.oh-my-zsh}/themes/dracula.zsh-theme
 fi
 
-echo "Installing theme"
+echo "Installing theme..."
 ln -s $(pwd)/themes/dracula-zsh/dracula.zsh-theme ${ZSH:-~/.oh-my-zsh}/themes/dracula.zsh-theme 
+echo "...Installed theme"
 
 #######################
 #       .files        #
 #######################
 
 # Move dot files
-echo -e "\033[0m\033[46m\n############ Moving .files ############\n\033[0m\033[36m"
+echo -e "\n\033[30m\033[46m############ Moving .files ############\n\033[0m\033[36m"
 
 dotfiles=(".aliases" ".gitconfig" ".profile" ".zshrc")
 for dotfile in "${dotfiles[@]}";do	
@@ -92,8 +93,8 @@ cp ./fonts/* ~/.fonts/
 #    Finishing Up     #
 #######################
 
-echo -e "\033[0m\033[43m\n############ Moving .files ############\n\033[0m\033[33m"
+echo -e "\n\033[30m\033[43m############ Finishing up ############\n\033[0m\033[33m"
 echo "Adding zsh helpers"
 cp "$(pwd)/os_check.zsh" ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}
 
-echo -e "\033[0m\033[42m\nComplete!\033[0m\033[0m"
+echo -e "\n\033[0m\033[32mComplete!\033[0m"
