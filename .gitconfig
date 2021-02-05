@@ -13,8 +13,10 @@
 	ciam = commit -a -m
 	s = status
 	diffs = diff --staged
-	up = push
+	up = push	
+	u = push
 	down = pull
+	d = pull
 	nb = checkout -b 
 	oops = commit -a --amend --no-edit
 	amend = commit --amend --no-edit
@@ -24,5 +26,3 @@
 	followTags = true
 [color]
 	status = auto
-[color "status"]
-	changed = magenta
