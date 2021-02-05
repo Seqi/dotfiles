@@ -10,7 +10,6 @@ Configs, themes, aliases, oh my. It's the doot files :trumpet:.
 - installs oh-my-zsh
 - installs zsh plugins
 - copies dotfiles
-- installs vs code extensions
 
 ---
 
@@ -51,7 +50,6 @@ Configs, themes, aliases, oh my. It's the doot files :trumpet:.
 ## [`.wsl`](.wsl) :house:
 > Shell customisations when running in WSL
 - removes gross ls colours
-- fixes docker host
 
 ## [`.zshrc`](.zshrc) :penguin:
 > Base shell customisation
@@ -61,4 +59,4 @@ Configs, themes, aliases, oh my. It's the doot files :trumpet:.
 
 ## [`wsl.conf`](wsl.conf) :hammer:
 > Configuration of WSL
-- Set wsl hard drive mount points
+- Set wsl hard drive mount points (requires elevated privileges!)
