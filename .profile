@@ -1,6 +1,9 @@
 # Turn off autocomplete beeps
 unsetopt LIST_BEEP
 
+# Configure firebase-zsh plugin
+FIREBASE_ZSH_ICON=true
+
 # Set aliases
 source ~/.aliases
 
