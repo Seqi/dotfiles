@@ -54,11 +54,3 @@ fi
 echo -e "Copying fonts"
 mkdir -p ~/.fonts
 cp ./fonts/* ~/.fonts/
-
-#######################
-#      Finish up      #
-#######################
-
-# Make zsh default shell
-echo -e "\033[0m\033[42m\n############ Setting zsh as default shell (password required) ############\n\033[0m\033[32m"
-chsh -s $(which zsh)
