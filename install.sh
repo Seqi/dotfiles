@@ -96,4 +96,4 @@ echo -e "\033[0m\033[43m\n############ Moving .files ############\n\033[0m\033[3
 echo "Adding zsh helpers"
 cp "$(pwd)/os_check.zsh" ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}
 
-echo -e "\033[0m\033[42m\nComplete!n\033[0m\033[0m"
+echo -e "\033[0m\033[42m\nComplete!\033[0m\033[0m"
