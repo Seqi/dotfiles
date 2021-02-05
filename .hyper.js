@@ -1,4 +1,4 @@
-﻿// Future versions of Hyper may add additional config options,
+// Future versions of Hyper may add additional config options,
 // which will not automatically be merged into this file.
 // See https://hyper.is#cfg for all currently supported options.
 
@@ -18,7 +18,7 @@ module.exports = {
     fontWeight: 'normal',
 
     // font weight for bold characters: 'normal' or 'bold'
-    fontWeightBold: 'normal',
+    fontWeightBold: 'bold',
 
     // line height as a relative unit
     lineHeight: 1,
@@ -73,7 +73,7 @@ module.exports = {
     // including the 6 x 6 color cubes and the grayscale map, just provide
     // an array here instead of a color map object
     colors: {
-      black: '#000000',
+      black: '#2a2d37',
       red: '#C51E14',
       green: '#1DC121',
       yellow: '#C7C329',
@@ -146,7 +146,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["hyper-dracula"],
+  plugins: ['nord-hyper'],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
