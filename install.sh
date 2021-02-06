@@ -56,7 +56,7 @@ echo 'Installing theme..'
 if [[ -d "$HOME/.zsh/pure" ]]
 then
 	echo 'Already exists, removing current'
-	rm -r "$PWD/themes/pure"
+	rm -r "$HOME/.zsh/pure"
 fi
 
 mkdir -p $HOME/.zsh
