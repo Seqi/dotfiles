@@ -4,6 +4,7 @@ unsetopt LIST_BEEP
 # Configure firebase-zsh plugin
 FIREBASE_ZSH_ICON=false
 FIREBASE_ZSH_STYLE=plain
+FIREBASE_ZSH_LEADING_SPACE=true
 
 # Configure pure theme
 fpath+=$HOME/.zsh/pure
