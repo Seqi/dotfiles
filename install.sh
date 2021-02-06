@@ -56,7 +56,7 @@ echo 'Installing theme..'
 if [[ ! -d "$HOME/.zsh/pure" ]]
 then
 	mkdir -p $HOME/.zsh
-	cp "$PWD/themes/pure/*" "$HOME/.zsh/pure"
+	cp "$PWD/themes/pure" "$HOME/.zsh"
 	echo 'Installed'
 else
 	echo 'Theme already installed'
