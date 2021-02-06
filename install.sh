@@ -53,14 +53,15 @@ echo -e "\n\033[30m\033[42m############ Installing zsh themes ############\033[0
 
 echo 'Installing theme..'
 
-if [[ ! -d "$HOME/.zsh/pure" ]]
+if [[ -d "$HOME/.zsh/pure" ]]
 then
-	mkdir -p $HOME/.zsh
-	cp -r "$PWD/themes/pure" "$HOME/.zsh"
-	echo 'Installed'
-else
-	echo 'Theme already installed'
+	echo 'Already exists, removing current'
+	rm -r "$PWD/themes/pure"
 fi
+
+mkdir -p $HOME/.zsh
+cp -r "$PWD/themes/pure" "$HOME/.zsh"
+echo 'Installed'
 
 #######################
 #       .files        #
