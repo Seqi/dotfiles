@@ -4,7 +4,7 @@ source ./os_check.zsh
 #######################
 #         Zsh         #
 #######################
-echo -e "\033[0m\033[41m############ Installing oh-my-zsh ############\n\e[0m\e[31m"
+echo -e "\033[0m\033[41m############ Installing oh-my-zsh ############\n\033[0m\033[31m"
 
 # Install oh-my-zsh
 if [[ -d "~/.oh-my-zsh" ]]
@@ -16,7 +16,7 @@ else
 fi
 
 ### Plugins ###
-echo -e "\n\033[30m\033[44m############ Installing zsh plugins ############\n\e[0m\e[34m"
+echo -e "\n\033[30m\033[44m############ Installing zsh plugins ############\n\033[0m\033[34m"
 
 # Syntax Highlighting
 if [[ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting ]]
