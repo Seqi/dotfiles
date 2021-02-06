@@ -51,16 +51,16 @@ fi
 ### Themes ###
 echo -e "\n\033[30m\033[42m############ Installing zsh themes ############\033[0m\033[32m\n"
 
-# Dracula
-if [[ -f ${ZSH:-~/.oh-my-zsh}/themes/dracula.zsh-theme ]]
-then
-	echo 'Theme already exists. Removing.'
-	rm ${ZSH:-~/.oh-my-zsh}/themes/dracula.zsh-theme
-fi
+echo 'Installing theme..'
 
-echo "Installing theme..."
-ln -s $(pwd)/themes/dracula-zsh/dracula.zsh-theme ${ZSH:-~/.oh-my-zsh}/themes/dracula.zsh-theme 
-echo "...Installed theme"
+if [[ ! -d "$HOME/.zsh/pure" ]]
+then
+	mkdir -p $HOME/.zsh
+	git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
+	echo 'Installed'
+else
+	echo 'Theme already installed'
+fi
 
 #######################
 #       .files        #
