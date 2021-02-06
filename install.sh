@@ -56,7 +56,7 @@ echo 'Installing theme..'
 if [[ ! -d "$HOME/.zsh/pure" ]]
 then
 	mkdir -p $HOME/.zsh
-	git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
+	cp "$PWD/themes/pure/*" "$HOME/.zsh/pure"
 	echo 'Installed'
 else
 	echo 'Theme already installed'

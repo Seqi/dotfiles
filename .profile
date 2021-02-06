@@ -2,7 +2,16 @@
 unsetopt LIST_BEEP
 
 # Configure firebase-zsh plugin
-FIREBASE_ZSH_ICON=true
+FIREBASE_ZSH_ICON=false
+FIREBASE_ZSH_STYLE=plain
+
+# Configure pure theme
+fpath+=$HOME/.zsh/pure
+autoload -U promptinit; promptinit
+prompt pure
+
+zstyle :prompt:pure:git:stash show yes
+zstyle :prompt:pure:prompt:success color cyan
 
 # Set aliases
 source ~/.aliases
