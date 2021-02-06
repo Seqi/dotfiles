@@ -24,7 +24,7 @@ Configs, themes, aliases, oh my. It's the doot files :trumpet:.
 
 ## [`themes`](themes) :rainbow:
 > A collection of themes for commonly used applications.
-- dracula-zsh (customised dracula theme)
+- pure-zsh (customised pure theme)
 
 ## [`.aliases`](.aliases) :link:
 > Type shorter things in zsh cos i'm lazy. Shortcuts for commonly used applications.
