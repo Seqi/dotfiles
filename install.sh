@@ -60,7 +60,8 @@ then
 fi
 
 mkdir -p $HOME/.zsh
-cp -r "$PWD/themes/pure" "$HOME/.zsh"
+git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
+cp -r "$PWD/themes/pure/pure.zsh" "$HOME/.zsh/pure"
 echo 'Installed'
 
 #######################
@@ -98,4 +99,4 @@ echo -e "\n\033[30m\033[43m############ Finishing up ############\033[0m\033[33m
 echo "Adding zsh helpers"
 cp "$(pwd)/os_check.zsh" ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}
 
-echo -e "\n\033[0m\033[32mComplete!\033[0m"
+echo -e "\n\033[0m\033[32mComplete! Restart your terminal to apply.\033[0m"
